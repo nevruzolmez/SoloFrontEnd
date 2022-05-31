@@ -61,6 +61,18 @@ class App extends Component {
       <div id="mainBody">
         <h1>CREATE YOUR OWN TO-DO LIST!!!</h1>
         <Item list={this.state.itemList} />
+        <div>
+          <div>
+            <label>Date Selection</label>
+            <input
+              id="datee"
+              type="date"
+              onClick={() =>
+                console.log(document.querySelector('input[id="datee"]').value)
+              }
+            />
+          </div>
+        </div>
         <input type="text" id="toDo" />
         <button id="postbtn" onClick={this.getInputValue}>
           POST!
